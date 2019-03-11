@@ -1,0 +1,11 @@
+apiVersion: certmanager.k8s.io/v1alpha1
+kind: Certificate
+metadata:
+  name: selfsigned-certificate
+spec:
+  secretName: ca-secret-development
+  commonName: "development"
+  isCA: true
+  issuerRef:
+    name: selfsigned-issuer
+    kind: Issuer

@@ -1,0 +1,18 @@
+bases:
+- ../cert-manager
+
+commonLabels:
+  app: helloweb-development
+
+namespace: helloweb-development
+
+nameSuffix: -development
+
+patchesStrategicMerge:
+- ingress.yaml
+- issuer.yaml
+- certificate.yaml
+
+resources:
+- selfsigned-issuer.yaml
+- selfsigned-certificate.yaml

@@ -1,0 +1,21 @@
+bases:
+- ../cert-manager
+
+commonLabels:
+  app: helloweb-staging
+
+namespace: helloweb-staging
+
+nameSuffix: -staging
+
+patchesStrategicMerge:
+- ingress.yaml
+- issuer.yaml
+- certificate.yaml
+
+secretGenerator:
+- name: ca-secret
+  files:
+    - secret/tls.crt
+    - secret/tls.key
+  type: "kubernetes.io/tls"

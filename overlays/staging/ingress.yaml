@@ -1,0 +1,9 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: ingress
+spec:
+  tls:
+  - hosts:
+    - staging.demo.jetstack.net
+    secretName: secret-staging-demo-jetstack-net

@@ -1,0 +1,14 @@
+bases:
+  - ../cert-manager
+
+commonLabels:
+  app: helloweb-production
+
+namespace: helloweb-production
+
+nameSuffix: -production
+
+patchesStrategicMerge:
+- ingress.yaml
+- issuer.yaml
+- certificate.yaml

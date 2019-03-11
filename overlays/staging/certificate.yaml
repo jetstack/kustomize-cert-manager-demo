@@ -1,0 +1,13 @@
+apiVersion: certmanager.k8s.io/v1alpha1
+kind: Certificate
+metadata:
+  name: certificate
+spec:
+  secretName: secret-staging-demo-jetstack-net
+  commonName: staging.demo.jetstack.net
+  dnsNames:
+  - staging.demo.jetstack.net
+  issuerRef:
+    name: issuer
+    kind: Issuer
+  acme: null
