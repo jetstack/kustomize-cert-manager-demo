@@ -3,10 +3,12 @@ kind: Certificate
 metadata:
   name: certificate
 spec:
-  secretName: secret-demo-jetstack-net
+  secretName: secret-demo
   renewBefore: 360h # 15d
+  # Change this to your own domain
   commonName: demo.jetstack.net
   dnsNames:
+  # Change this to your own domain
   - demo.jetstack.net
   issuerRef:
     name: issuer
@@ -16,4 +18,5 @@ spec:
     - http01:
         ingress: ingress
       domains:
+      # Change this to your own domain
       - demo.jetstack.net

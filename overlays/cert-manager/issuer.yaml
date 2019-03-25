@@ -4,6 +4,7 @@ metadata:
   name: issuer
 spec:
   acme:
+    # Change this to your own email
     email: demo@jetstack.io
     server: https://acme-staging-v02.api.letsencrypt.org/directory
     privateKeySecretRef:

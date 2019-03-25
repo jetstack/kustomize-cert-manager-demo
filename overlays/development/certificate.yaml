@@ -3,9 +3,11 @@ kind: Certificate
 metadata:
   name: certificate
 spec:
-  secretName: secret-development-demo-jetstack-net
+  secretName: secret-development-demo
+  # Change this to your own domain
   commonName: development.demo.jetstack.net
   dnsNames:
+  # Change this to your own domain
   - development.demo.jetstack.net
   issuerRef:
     name: issuer

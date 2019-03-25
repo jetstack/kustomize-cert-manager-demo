@@ -3,9 +3,11 @@ kind: Certificate
 metadata:
   name: certificate
 spec:
-  secretName: secret-www-demo-jetstack-net
+  secretName: secret-www-demo
+  # Change this to your own domain
   commonName: www.demo.jetstack.net
   dnsNames:
+  # Change this to your own domain
   - www.demo.jetstack.net
   issuerRef:
     name: issuer
@@ -15,4 +17,5 @@ spec:
     - http01:
         ingress: ingress
       domains:
+      # Change this to your own domain
       - www.demo.jetstack.net
