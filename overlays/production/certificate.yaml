@@ -5,10 +5,10 @@ metadata:
 spec:
   secretName: secret-www-demo
   # Change this to your own domain
-  commonName: www.demo.jetstack.net
+  commonName: www.demo.example.net
   dnsNames:
   # Change this to your own domain
-  - www.demo.jetstack.net
+  - www.demo.example.net
   issuerRef:
     name: issuer
     kind: Issuer
@@ -18,4 +18,4 @@ spec:
         ingress: ingress
       domains:
       # Change this to your own domain
-      - www.demo.jetstack.net
+      - www.demo.example.net

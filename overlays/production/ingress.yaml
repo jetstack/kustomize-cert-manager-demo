@@ -6,5 +6,5 @@ spec:
   tls:
   - hosts:
     # Change this to your own domain
-    - www.demo.jetstack.net
+    - www.demo.example.net
     secretName: secret-www-demo

@@ -5,10 +5,10 @@ metadata:
 spec:
   secretName: secret-development-demo
   # Change this to your own domain
-  commonName: development.demo.jetstack.net
+  commonName: development.demo.example.net
   dnsNames:
   # Change this to your own domain
-  - development.demo.jetstack.net
+  - development.demo.example.net
   issuerRef:
     name: issuer
     kind: Issuer
