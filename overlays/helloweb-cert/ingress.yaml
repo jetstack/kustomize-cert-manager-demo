@@ -1,0 +1,10 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: helloweb-ingress
+  annotations:
+    cert-manager.io/cluster-issuer: helloweb-issuer
+spec:
+  tls:
+  - hosts: [] # values will be added in another patch
+    secretName: helloweb-cert

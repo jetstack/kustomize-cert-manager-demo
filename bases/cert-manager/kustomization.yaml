@@ -1,0 +1,8 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+commonLabels:
+  demo: kustomize-cert-manager
+
+resources:
+  - https://github.com/jetstack/cert-manager/releases/download/v1.6.1/cert-manager.yaml
