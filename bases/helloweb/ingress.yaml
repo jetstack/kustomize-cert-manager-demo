@@ -2,13 +2,15 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: helloweb-ingress
-  annotations:
-    kubernetes.io/ingress.global-static-ip-name: web-static-ip
 spec:
+  ingressClassName: nginx
   rules:
   - http:
       paths:
       - path: /
+        pathType: Prefix
         backend:
-          serviceName: helloweb-service
-          servicePort: 8080
+          service:
+            name: helloweb-service
+            port:
+              number: 8080

@@ -4,6 +4,10 @@ metadata:
   name: helloweb-issuer
 spec:
   acme:
-    server: "https://acme-staging-v02.api.letsencrypt.org/directory"
+    server: "https://acme-v02.api.letsencrypt.org/directory"
     privateKeySecretRef:
       name: issuer-letsencrypt-account-key
+    solvers:
+      - http01:
+          ingress:
+            name: helloweb-ingress

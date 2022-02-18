@@ -1,5 +1,0 @@
-[{
-    "op": "update",
-    "path": "/spec/acme/server",
-    "value": "https://acme-v02.api.letsencrypt.org/directory"
-}]

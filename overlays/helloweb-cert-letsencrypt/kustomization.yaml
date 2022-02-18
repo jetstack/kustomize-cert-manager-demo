@@ -13,11 +13,11 @@ commonLabels:
 resources:
   - issuer.yaml
 
-# Uncomment to use the production Let's Encrypt server
-#patchesJSON6902:
-#  - path: issuer_patch_letsencrypt_prod.json
-#    target:
-#      group: cert-manager.io
-#      version: v1
-#      kind: Issuer
-#      name: helloweb-issuer
+# Create this patch to set the Issuer email
+patchesJSON6902:
+  - path: issuer_patch.json
+    target:
+      group: cert-manager.io
+      version: v1
+      kind: Issuer
+      name: helloweb-issuer

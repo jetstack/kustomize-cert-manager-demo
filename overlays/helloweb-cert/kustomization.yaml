@@ -6,15 +6,15 @@ bases:
 
 namespace: helloweb
 
-patches:
+patchesStrategicMerge:
 - ingress.yaml
 
 # Create this patch to set the Ingress domain
 patchesJSON6902:
 - path: ingress_patch.json
   target:
-    group: extensions
-    version: v1beta1
+    group: networking.k8s.io
+    version: v1
     kind: Ingress
     name: helloweb-ingress
 
