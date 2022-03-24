@@ -1,0 +1,10 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: helloweb-ingress
+  annotations:
+    cert-manager.io/issuer: helloweb-issuer
+spec:
+  tls:
+  - hosts: [] # hosts will be added in another patch
+    secretName: helloweb-cert

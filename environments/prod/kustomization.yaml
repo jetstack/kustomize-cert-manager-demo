@@ -1,0 +1,7 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+bases:
+  - ../../bases/ingress-nginx
+  - ../../bases/cert-manager
+  - ../../overlays/helloweb-cert-letsencrypt

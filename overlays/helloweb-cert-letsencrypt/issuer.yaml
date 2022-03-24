@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1
+kind: Issuer
+metadata:
+  name: helloweb-issuer
+spec:
+  acme:
+    server: "https://acme-v02.api.letsencrypt.org/directory"
+    privateKeySecretRef:
+      name: issuer-letsencrypt-account-key
+    solvers:
+      - http01:
+          ingress:
+            name: helloweb-ingress
